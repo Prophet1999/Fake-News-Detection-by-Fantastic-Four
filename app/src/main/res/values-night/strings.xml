@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="input_hint">Enter Input News to check for Fakeness</string>
+    <string name="mainimage">MainImage</string>
+</resources>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Fake News Detection Android App</string>
+    <string name="input_hint">Enter Input News to check for Fakeness</string>
+    <string name="detect">Detect</string>
+    <string name="mainimage">MainImage</string>
+    <string name="output_result_here">Output result here</string>
 </resources>
