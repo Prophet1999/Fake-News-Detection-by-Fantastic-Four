@@ -17,9 +17,12 @@ import androidx.appcompat.app.AppCompatActivity
 //import java.util.*
 //import android.R
 import android.os.Handler
+import android.os.Looper
 import android.util.Log
+import android.widget.Toast
+
 //import android.view.View
-import org.tensorflow.lite.support.label.Category
+//import org.tensorflow.lite.support.label.Category
 
 
 class MainActivity : AppCompatActivity() {
@@ -32,22 +35,22 @@ class MainActivity : AppCompatActivity() {
     //private var tfLiteInterpreter: Interpreter? = null
     private var client: TextClassificationClient? = null
     private var handler: Handler? = null
-    private var result: TextView = findViewById(R.id.result)
+    private lateinit var result: TextView
 
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        Log.v(TAG, "onCreate")
         val messagetext: EditText = findViewById(R.id.message_text)
-
+        result = findViewById(R.id.result)
         client = TextClassificationClient(applicationContext)
-        //handler = Handler()
+        handler = Handler(Looper.getMainLooper())
+
         val classifyButton = findViewById<Button>(R.id.button)
         classifyButton.setOnClickListener {
-            classify(
-                messagetext.text.toString()
-            )
+            classify(messagetext.text.toString())
         }
 
 
@@ -57,6 +60,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         Log.v(TAG, "onStart")
         handler!!.post { client!!.load() }
+        handler!!.postDelayed({
+            Toast.makeText(this@MainActivity, (client!!.classifier==null).toString() , Toast.LENGTH_LONG).show()
+        },3000)
     }
 
     override fun onStop() {
@@ -70,14 +76,15 @@ class MainActivity : AppCompatActivity() {
         handler!!.post {
 
             // Run text classification with TF Lite.
-            val results: List<Category> = client!!.classify(text)
+            val results: List<Result> = client!!.classify(text)
 
             // Show classification result on screen
             showResult(results)
         }
     }
 
-    private fun showResult(r: List<Category>){
-        result.text = r[0].label
+    private fun showResult(r: List<Result>){
+
+        result.text = r[0].title
     }
 }
