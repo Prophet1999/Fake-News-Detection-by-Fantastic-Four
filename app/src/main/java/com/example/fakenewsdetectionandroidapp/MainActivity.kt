@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
     //private val INPUT_MAXLEN = 171
 
     //private var tfLiteInterpreter: Interpreter? = null
+    private val label = arrayOf("Fake", "True")
     private var client: TextClassificationClient? = null
     private var handler: Handler? = null
     private lateinit var result: TextView
@@ -60,9 +61,9 @@ class MainActivity : AppCompatActivity() {
         super.onStart()
         Log.v(TAG, "onStart")
         handler!!.post { client!!.load() }
-        handler!!.postDelayed({
-            Toast.makeText(this@MainActivity, (client!!.classifier==null).toString() , Toast.LENGTH_LONG).show()
-        },3000)
+       // handler!!.postDelayed({
+       //     Toast.makeText(this@MainActivity, (client!!.classifier==null).toString() , Toast.LENGTH_LONG).show()
+       // },3000)
     }
 
     override fun onStop() {
@@ -84,7 +85,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showResult(r: List<Result>){
-
-        result.text = r[0].title
+        val m: String = label[r[0].title!!.toInt()] + ":" + r[0].confidence
+        val n: String = label[r[1].title!!.toInt()] + ":" + r[1].confidence
+        result.text = n + "\n" + m
     }
 }

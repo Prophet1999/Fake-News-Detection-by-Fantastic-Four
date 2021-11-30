@@ -9,7 +9,7 @@ class Result(
     /** Display name for the result.  */
     val title: String?,
     /** A sortable score for how good the result is relative to others. Higher should be better.  */
-    private val confidence: Float?
+    val confidence: Float?
 ) : Comparable<Result> {
 
     override fun toString(): String {
