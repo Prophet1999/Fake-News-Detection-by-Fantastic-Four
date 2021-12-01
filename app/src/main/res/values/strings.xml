@@ -4,4 +4,5 @@
     <string name="detect">Detect</string>
     <string name="mainimage">MainImage</string>
     <string name="output_result_here">Output result here</string>
+    <string name="result">News is</string>
 </resources>
