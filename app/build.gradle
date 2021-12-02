@@ -36,6 +36,7 @@ android {
     }
     buildFeatures {
         mlModelBinding true
+        viewBinding true
     }
 }
 
@@ -46,8 +47,7 @@ dependencies {
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.2'
-    implementation 'org.tensorflow:tensorflow-lite-support:0.3.0'
-    implementation 'org.tensorflow:tensorflow-lite-metadata:0.3.0'
+
     implementation 'org.tensorflow:tensorflow-lite-gpu:2.7.0'
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
