@@ -1,5 +1,6 @@
 package com.example.fakenewsdetectionandroidapp.ui.login
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -11,7 +12,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main2)
         val button = findViewById<Button>(R.id.button)
         button.setOnClickListener{
-            setContentView(R.layout.activity_main)
+           var intent=Intent(this@MainActivity,MainActivity::class.java)
+            startActivity(intent)
         }
     }
 }
