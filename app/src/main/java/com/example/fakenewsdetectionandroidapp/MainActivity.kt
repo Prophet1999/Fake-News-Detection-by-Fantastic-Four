@@ -19,7 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import android.widget.Toast
+//import android.widget.Toast
 
 //import android.view.View
 //import org.tensorflow.lite.support.label.Category
@@ -85,8 +85,12 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showResult(r: List<Result>){
-        val m: String = label[r[0].title!!.toInt()] + ":" + r[0].confidence
-        val n: String = label[r[1].title!!.toInt()] + ":" + r[1].confidence
-        result.text = n + "\n" + m
+        val a = r[0].confidence
+        val l =label[r[0].title!!.toInt()]
+        val m: String = "$l:$a"
+        val b = r[1].confidence
+        val n: String = label[r[1].title!!.toInt()] + ":" + b
+
+        result.text = "News is $l\n Probabilities :   \n $n \n  $m"
     }
 }

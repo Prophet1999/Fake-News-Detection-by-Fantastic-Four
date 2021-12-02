@@ -4,6 +4,7 @@
     <string name="detect">Detect</string>
     <string name="mainimage">MainImage</string>
     <string name="output_result_here">Output result here</string>
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
