@@ -15,5 +15,6 @@
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
     <string name="logo_description">This is a logo</string>
-    <string name="login">Login</string>
+    <string name="login">Start</string>
+    <string name="clear">clear</string>
 </resources>

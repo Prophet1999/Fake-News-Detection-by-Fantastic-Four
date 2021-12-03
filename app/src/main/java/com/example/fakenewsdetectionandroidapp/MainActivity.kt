@@ -38,7 +38,6 @@ class MainActivity : AppCompatActivity() {
     private var handler: Handler? = null
     private lateinit var result: TextView
 
-
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,6 +45,7 @@ class MainActivity : AppCompatActivity() {
         Log.v(TAG, "onCreate")
         val messagetext: EditText = findViewById(R.id.message_text)
         result = findViewById(R.id.result)
+        val clear:Button = findViewById(R.id.button3)
         client = TextClassificationClient(applicationContext)
         handler = Handler(Looper.getMainLooper())
 
@@ -53,7 +53,10 @@ class MainActivity : AppCompatActivity() {
         classifyButton.setOnClickListener {
             classify(messagetext.text.toString())
         }
-
+        clear.setOnClickListener{
+            messagetext.setText("")
+            result.setText("")
+        }
 
     }
 

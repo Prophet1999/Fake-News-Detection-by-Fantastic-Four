@@ -47,13 +47,24 @@
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="354dp"
-        android:layout_height="185dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="352dp"
+        android:layout_height="141dp"
+        android:layout_marginBottom="84dp"
         android:hint="@string/output_result_here"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.418"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="106dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="16dp"
+        android:text="@string/clear"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent" />
 
 
