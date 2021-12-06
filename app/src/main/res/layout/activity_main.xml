@@ -5,6 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:backgroundTint="#80FFFFFF"
+    android:backgroundTintMode="src_over"
     tools:context=".MainActivity">
 
     <EditText
@@ -13,9 +15,8 @@
         android:layout_height="158dp"
         android:autofillHints="None"
         android:hint="@string/input_hint"
+        android:alpha="0.8"
         android:inputType="text"
-        android:text="Enter Input news to check for fakeness"
-        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -52,8 +53,8 @@
         android:layout_height="84dp"
         android:layout_marginBottom="120dp"
         android:hint="@string/output_result_here"
-        android:text="@string/output_result_here"
-        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:alpha="0.8"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.492"
