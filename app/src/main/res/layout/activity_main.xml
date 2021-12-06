@@ -4,29 +4,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:rotation="1"
-    android:rotationX="1"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/message_text"
-        android:inputType="text"
-        android:layout_width="339dp"
-        android:layout_height="184dp"
-        android:hint="@string/input_hint"
+        android:layout_width="370dp"
+        android:layout_height="158dp"
         android:autofillHints="None"
+        android:hint="@string/input_hint"
+        android:inputType="text"
+        android:text="Enter Input news to check for fakeness"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.609"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.323"
-        />
+        app:layout_constraintVertical_bias="0.045" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="196dp"
-        android:layout_height="83dp"
+        android:layout_width="211dp"
+        android:layout_height="71dp"
         android:layout_marginBottom="240dp"
         android:text="@string/detect"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -35,37 +35,50 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
-        android:contentDescription="@string/mainimage"
         android:id="@+id/imageView"
-        android:layout_width="107dp"
-        android:layout_height="100dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="74dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="488dp"
+        android:contentDescription="@string/mainimage"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@android:mipmap/sym_def_app_icon" />
 
     <TextView
         android:id="@+id/result"
-        android:layout_width="352dp"
-        android:layout_height="141dp"
-        android:layout_marginBottom="84dp"
+        android:layout_width="316dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="120dp"
         android:hint="@string/output_result_here"
+        android:text="@string/output_result_here"
+        android:textColor="#ffffff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintHorizontal_bias="0.492"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/button3"
-        android:layout_width="106dp"
-        android:layout_height="45dp"
-        android:layout_marginBottom="16dp"
+        android:layout_width="155dp"
+        android:layout_height="48dp"
         android:text="@string/clear"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.47"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.913" />
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView"
+        android:layout_width="410dp"
+        android:layout_height="420dp"
+        android:src="@drawable/techshark"
+        app:layout_constraintBottom_toTopOf="@+id/button3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
