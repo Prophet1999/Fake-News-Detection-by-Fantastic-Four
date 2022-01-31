@@ -1,0 +1,43 @@
+Major Project
+
+Overview
+It is fake news detection android app that deals and detects fake news on the basis of true and fake probabilities also known as rumours on kaggle and custom datasets.
+It is supported for all versions of android above 6.0.
+It is a 4 member group project where the tasks were divided on the basis of model/backend development, frontend development and integration, Data collection and design, documentation and reporting.
+
+The whole project is available in my github repository which are basically all the gradle and model files for android studio, presentation, model, report and Fake / True Datasets.
+GitHub URL- https://github.com/Prophet1999/Fake-News-Detection-by-Fantastic-Four
+
+My role
+1. My role was of frontend development and testing of that frontend after integration using android studio by kotlin and xml.
+2. I collected the datasets of all fake and genuine news from the internet and custom news headlines in the csv format from kaggle.
+3. I also maintained the remote integration like push and pull requests and resolved conflicts arising in the github repository.
+
+Class
+Text classification client is the handled class of the android studio that allows us to navigate and integrate and add events in the android activities using oncreate ondelete etc.
+
+Activities
+Login activity is the first and foremost frontend that allows a user to login within the app using some credentials
+Main activity is the by default active class of the android studio where the model is integrated, which inputs values and outputs the result as the polarity values
+Positive for genuine news and 0 for neutral and negative for fake news.
+
+Why login page not accepting mail ID
+We were using extreme programming and one of its creeds it to only add functionality which is required.
+
+How the input is given
+Input text is sequence of words which is handled automatically by the text classification client class where it converts each word into a unique integer same as that of comma separated dictionary and passes it as a binary code for the TFlite model.
+
+Challenges faced
+Null pointer exception
+The problem was that it was not finding the file path for the model. We saved the model in a path we know it searches using the android studio to first create a folder to that path.
+Training and testing large models is time consuming and tiring process
+
+
+Handled challenges
+Null pointer exception
+We bypassed it. By saving the model in the path where it's sure to search. And confirming using the add file path to string function of Android studio.
+We lended high end PCs from our friend for training and testing.
+
+Google collab code
+It's the whole code for tflite model creation.
+For it to work, you need to upload true.csv and fake.csv to the collab.
